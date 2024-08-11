@@ -1,3 +1,3 @@
 langchain 
 langchain_experimental 
-langchain-groq pandas 
+langchain-groq
