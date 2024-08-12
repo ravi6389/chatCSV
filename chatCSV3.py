@@ -32,10 +32,11 @@ if(uploaded_file):
     st.write(df.head(3))
 
     prompt = st.text_input('Enter your prompt')
+    agent = create_pandas_dataframe_agent(llm = llm,df = df, allow_dangerous_code=True)
 
     if st.button('Generate'):
         if prompt:
-            agent = create_pandas_dataframe_agent(llm = llm,df = df, allow_dangerous_code=True)
+            
             
             with st.spinner("generating response..."):
                 output = agent.invoke(prompt)
