@@ -27,7 +27,7 @@ st.write('Developed by Ravi Shankar Prasad - https://www.linkedin.com/in/ravi-sh
 uploaded_file = st.file_uploader('Upload your CSV file')
 
 if(uploaded_file):
-    df = pd.read_csv(uploaded_file)
+    df = pd.read_csv(uploaded_file, encoding='unicode_escape')
 
     st.write(df.head(3))
 
